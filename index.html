@@ -10,7 +10,22 @@
     <title>Listmon</title>
 </head>
 
+
 <body>
+    <div class="container-fluid">
+
+        <form onsubmit="app.controllers.listController.addList(event)">
+            <div id="border" class="form-group">
+                <label for="name">task</label>
+                <input type="text" class="form-control" name="name" placeholder="list name" required>
+            </div>
+            <button class="btn btn-primary" type="submit">submit</button>
+        </form>
+        <div id="name" class="row-6"></div>
+
+
+
+    </div>
 
 
     <script src="app/main.js" type="module"></script>

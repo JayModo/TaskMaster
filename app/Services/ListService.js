@@ -5,9 +5,39 @@ let _state = {
     lists: []
 }
 
-
+console.log("service")
 //Public
 export default class ValuesService {
+    deleteNote(ListIndex, noteIndex) {
+        _state.lists[ListIndex].note.splice(noteIndex, 1)
+        this.saveLists()
+        this.confirmList()
+    }
+
+    deleteList(index) {
+        _state.lists.splice(index, 1)
+        this.saveLists()
+        this.confirmList()
+    }
+
+    addNote(newNote, listIndex) {
+        _state.lists[listIndex].note.push(newNote)
+        this.saveLists()
+    }
+
+    addList(newList) {
+        _state.lists.push(new List(newList))
+        console.log(_state.lists)
+        this.saveLists()
+    }
+    constructor() {
+        console.log("this is the loading part thingy")
+        this.getLists()
+    }
+    get List() {
+        return _state.lists.map(list => new List(list))
+
+    }
     //TODO  Here is where we handle all of our data manipulation, 
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
@@ -29,4 +59,11 @@ export default class ValuesService {
             _state.lists = saved;
         }
     }
+    confirmList() {
+        if (this.deleteList) {
+            window.confirm("ARE YOU SURE!!!!11!!!")
+        }
+    }
+
+
 }
