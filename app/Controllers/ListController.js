@@ -1,5 +1,5 @@
 import ListService from "../Services/ListService.js";
-import List from "../models/List.js";
+
 
 //Private
 let _listService = new ListService()
