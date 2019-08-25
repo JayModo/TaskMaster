@@ -61,7 +61,7 @@ export default class ValuesService {
     }
     confirmList() {
         if (this.deleteList) {
-            window.confirm("ARE YOU SURE!!!!11!!!")
+            window.confirm("is it really done?")
         }
     }
 

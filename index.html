@@ -12,16 +12,16 @@
 
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
 
         <form onsubmit="app.controllers.listController.addList(event)">
             <div id="border" class="form-group">
                 <label for="name">task</label>
                 <input type="text" class="form-control" name="name" placeholder="list name" required>
             </div>
-            <button class="btn btn-primary" type="submit">submit</button>
+            <button class="btn" type="submit"></button>
         </form>
-        <div id="name" class="row-6"></div>
+        <div id="name" class="row-6" style="overflow-wrap: break-word; display: flex; flex-flow: wrap"></div>
 
 
 
