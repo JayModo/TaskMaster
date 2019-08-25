@@ -31,7 +31,7 @@ export default class ValuesService {
         this.saveLists()
     }
     constructor() {
-        console.log("this is the loading part thingy")
+        console.log("this is the loading")
         this.getLists()
     }
     get List() {
